@@ -9,7 +9,14 @@ app.set('view engine', 'ejs')
 
 app.get('/', function(request, response){
 	console.log(request.method + ' ' + request.url)
-	response.render('index');
+	
+	board = new grid.init
+	board.factory(cell.init)
+	var pac = new pacman.init
+	pac.name = 'Pablo'
+	board.placing(pac, '4:6')
+
+	response.render('index', board);
 })
 
 app.get('*', function(request, response) {
@@ -18,10 +25,5 @@ app.get('*', function(request, response) {
 })
 
 app.listen(3000, function() {
-	// newCell = new cell.init
-	newGrid = new grid.init
-	// console.log(newCell.isAvailable)
-	console.log(newGrid.size)
-	console.log(newGrid.factory(cell.init))
 	console.log('listening to port 3000')
 })

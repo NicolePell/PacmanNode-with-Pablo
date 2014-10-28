@@ -3,6 +3,7 @@ var pacman = exports = module.exports = {}
 pacman.init = function() {
 	this.currentCell
 	this.move = pacman.move
+	this.name = 'pacman'
 	
 }
 
@@ -25,9 +26,3 @@ pacman.move = function(keyDirection) {
 		this.currentCell = this.currentCell[0] + this.currentCell[1] + (parseInt(this.currentCell[2]) + 1)
 	}
 }
-// row:column
-// 4:6
-// arrow down --> 5:6
-// arrow up -->  3:6
-// arrow right --> 4:7
-// arrow left --> 4:5

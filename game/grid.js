@@ -19,5 +19,9 @@ grid.factory = function(object) {
 grid.placing = function(object,position) {
 	if (this[position].isAvailable) {
 	this[position].changeContent(object)
-	object.currentCell = position }
+	object.currentCell = position
+	this[position].name = object.name }
 }
+
+
+// module.exports {}

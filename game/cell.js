@@ -2,6 +2,7 @@ var cell = exports = module.exports = {}
 
 cell.init = function() {
 	this.content
+	this.name = "empty"
 	this.isAvailable = true
 	this.changeContent = cell.changeContent
 

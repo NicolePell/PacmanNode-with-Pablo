@@ -1,1 +1,15 @@
 <h1>Pacman!!!</h1>
+
+<table>
+	<% for(var i = 1; i < 31; i++) { %>
+		<tr>
+
+		<% for(var j = 1; j <31; j++) { %>
+		<td><%= board[i + ':' + j].name %></td>
+
+		<% } %>
+		</tr>
+
+		<% } %>
+
+</table>
