@@ -26,3 +26,5 @@ pacman.move = function(keyDirection) {
 		this.currentCell = this.currentCell[0] + this.currentCell[1] + (parseInt(this.currentCell[2]) + 1)
 	}
 }
+
+

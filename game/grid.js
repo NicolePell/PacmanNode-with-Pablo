@@ -5,6 +5,8 @@ grid.init = function() {
 	this.size = DEFAULT_SIZE
 	this.factory = grid.factory
 	this.placing = grid.placing
+	this.placeHorizontalWalls = grid.placeHorizontalWalls
+	this.placeVerticalWalls = grid.placeVerticalWalls
 }
 
 grid.factory = function(object) {
@@ -24,4 +26,16 @@ grid.placing = function(object,position) {
 }
 
 
-// module.exports {}
+grid.placeHorizontalWalls = function(object) {
+	for(var j = 1; j < 31; j++) {
+		this.placing(object, [1 + ':' + j])
+		this.placing(object, [30 + ':' + j])
+	}
+}
+
+grid.placeVerticalWalls = function(object) {
+for(var j = 2; j < 30; j++) {
+	this.placing(object, [j + ':' + 1])
+	this.placing(object, [j + ':' + 30])
+	}
+}
